@@ -5,6 +5,7 @@ A comprehensive learning repository for **Playwright Testing Framework** with pr
 ## 📋 Overview
 
 This repository contains structured learning materials and test examples covering:
+
 - Browser automation basics
 - Page navigation and interactions
 - Multiple browser contexts
@@ -16,6 +17,7 @@ This repository contains structured learning materials and test examples coverin
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js (v14 or higher)
 - npm or yarn package manager
 
@@ -59,31 +61,37 @@ tests/
 ## 🧪 Running Tests
 
 ### Run all tests
+
 ```bash
 npx playwright test
 ```
 
 ### Run tests in headed mode (visible browser)
+
 ```bash
 npx playwright test --headed
 ```
 
 ### Run a specific test file
+
 ```bash
 npx playwright test tests/02_first_test/213_multiple_context.spec.ts
 ```
 
 ### Run tests with debug mode
+
 ```bash
 npx playwright test --debug
 ```
 
 ### Run tests in UI mode (interactive)
+
 ```bash
 npx playwright test --ui
 ```
 
 ### Run TypeScript files directly (without test framework)
+
 ```bash
 npx ts-node tests/02_first_test/213_multiple_context.spec.ts
 ```
@@ -91,10 +99,12 @@ npx ts-node tests/02_first_test/213_multiple_context.spec.ts
 ## 📝 Test Categories
 
 ### 1. Basic Tests (`01_Basics/`)
+
 - Setup and configuration
 - Test annotations (skip, only, fixme, slow)
 
 ### 2. First Tests (`02_first_test/`)
+
 - Simple page navigation
 - Browser and context concepts
 - Multiple contexts and pages
@@ -102,6 +112,7 @@ npx ts-node tests/02_first_test/213_multiple_context.spec.ts
 - Context reuse patterns
 
 ### 3. Real-World Tasks (`01_Task_21/`)
+
 - **Task_Multiple_Context.spec.ts**: Tests multiple user scenarios on SauceDemo
   - Standard User
   - Locked Out User
@@ -126,6 +137,7 @@ use: {
 ### Using baseURL in Multiple Contexts
 
 **Option 1: In playwright.config.ts**
+
 ```typescript
 use: {
   baseURL: 'https://www.saucedemo.com/',
@@ -133,37 +145,43 @@ use: {
 ```
 
 **Option 2: In test context**
+
 ```typescript
-const context = await browser.newContext({ 
-  baseURL: 'https://www.saucedemo.com/' 
+const context = await browser.newContext({
+  baseURL: "https://www.saucedemo.com/",
 });
 ```
 
 **Option 3: In page.goto()**
+
 ```typescript
-await page.goto('/'); // Uses baseURL if configured
+await page.goto("/"); // Uses baseURL if configured
 ```
 
 ## 🔑 Key Concepts Covered
 
 ### Browser Contexts
+
 - Creating multiple independent browser contexts
 - Context isolation
 - Cookie/storage management per context
 - Parallel user simulation
 
 ### Multiple Pages
+
 - Creating multiple pages within a context
 - Page navigation
 - Handling multiple pages simultaneously
 
 ### Test Annotations
+
 - `@skip` - Skip tests
 - `@only` - Run only this test
 - `@fixme` - Mark as needs fixing
 - `@slow` - Mark as slow test
 
 ### Context Options
+
 - Custom user agents
 - Viewport settings
 - Device emulation
@@ -176,19 +194,19 @@ import { test, expect, chromium } from "@playwright/test";
 
 test("multiple contexts", async () => {
   const browser = await chromium.launch({ headless: false });
-  
+
   // Context 1
   const context1 = await browser.newContext();
   const page1 = await context1.newPage();
   await page1.goto("https://www.saucedemo.com/");
-  
+
   // Context 2 (independent session)
   const context2 = await browser.newContext();
   const page2 = await context2.newPage();
   await page2.goto("https://www.saucedemo.com/");
-  
+
   // Both contexts run independently
-  
+
   await context1.close();
   await context2.close();
   await browser.close();
@@ -226,16 +244,19 @@ test("multiple contexts", async () => {
 ## 🐛 Debugging
 
 ### Enable debug mode
+
 ```bash
 npx playwright test --debug
 ```
 
 ### View test reports
+
 ```bash
 npx playwright show-report
 ```
 
 ### Enable verbose logging
+
 ```bash
 DEBUG=pw:api npx playwright test
 ```
