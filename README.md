@@ -53,9 +53,18 @@ tests/
 │   ├── 216_manual_context.spec.ts         # Manual context creation
 │   ├── 217_manual_context_options.spec.ts # Context with custom options
 │   └── 218_context_reuse.spec.ts          # Context reuse patterns
-└── 01_Task_21/
-    ├── Task_Multiple_Context.spec.ts      # Multiple context with SauceDemo
-    └── Task_Same_context_multile_pages.spec.ts # Multiple pages in single context
+├── 03_Locators_Commandas/
+│   ├── 219_Commands.spec.ts               # Basic Playwright commands
+│   ├── 220_gotoCommands.spec.ts           # Navigation commands
+│   ├── 221_reffer_command.spec.ts         # Referrer and navigation
+│   ├── 222_Automation_app.vwo.com.spec.ts # VWO app automation
+│   └── index.html                         # Test HTML file
+└── Tasks/
+    ├── Task_21_april/
+    │   ├── Task_Multiple_Context.spec.ts      # Multiple context with SauceDemo
+    │   └── Task_Same_context_multile_pages.spec.ts # Multiple pages in single context
+    └── Task_23_april/
+        └── Project#2_Cura_Website_Automation.spec.ts # Cura website automation
 ```
 
 ## 🧪 Running Tests
@@ -111,7 +120,17 @@ npx ts-node tests/02_first_test/213_multiple_context.spec.ts
 - Manual context creation with options
 - Context reuse patterns
 
-### 3. Real-World Tasks (`01_Task_21/`)
+### 3. Locators & Commands (`03_Locators_Commandas/`)
+
+- **219_Commands.spec.ts**: Basic Playwright commands
+- **220_gotoCommands.spec.ts**: Navigation commands and URL handling
+- **221_reffer_command.spec.ts**: Referrer and navigation patterns
+- **222_Automation_app.vwo.com.spec.ts**: Real-world automation on VWO app
+- **index.html**: Test HTML file for practice
+
+### 4. Real-World Tasks (`Tests/`)
+
+#### Task_21_april/
 
 - **Task_Multiple_Context.spec.ts**: Tests multiple user scenarios on SauceDemo
   - Standard User
@@ -122,6 +141,13 @@ npx ts-node tests/02_first_test/213_multiple_context.spec.ts
   - Visual User
 
 - **Task_Same_context_multile_pages.spec.ts**: Multiple pages within single context
+
+#### Task_23_april/
+
+- **Project#2_Cura_Website_Automation.spec.ts**: Healthcare website (Cura) automation
+  - Appointment booking workflows
+  - Form validation
+  - User interactions
 
 ## ⚙️ Configuration
 
@@ -187,6 +213,13 @@ await page.goto("/"); // Uses baseURL if configured
 - Device emulation
 - Network interception
 
+### Locators & Commands
+
+- Element locators (CSS, XPath, Text, Role)
+- Navigation commands (goto, back, forward, reload)
+- Interaction commands (click, fill, type, select)
+- Assertion and validation
+
 ## 📊 Example: Multiple Contexts
 
 ```typescript
@@ -228,10 +261,12 @@ test("multiple contexts", async () => {
 
 ## 🎯 Learning Path
 
-1. Start with `01_Basics/` tests
-2. Move to `02_first_test/` for core concepts
-3. Practice with `01_Task_21/` real-world scenarios
-4. Experiment with different configurations and options
+1. Start with `01_Basics/` tests for fundamentals
+2. Move to `02_first_test/` for core concepts (contexts, pages)
+3. Practice with `03_Locators_Commandas/` for locators and commands
+4. Apply with `Tests/Task_21_april/` for real-world SauceDemo scenarios
+5. Advance with `Tests/Task_23_april/` for complex application automation
+6. Experiment with different configurations and options
 
 ## 💡 Tips
 
