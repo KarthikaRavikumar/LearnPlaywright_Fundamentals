@@ -12,7 +12,10 @@ This repository contains structured learning materials and test examples coverin
 - Multiple pages handling
 - Test annotations
 - Context reuse strategies
-- Real-world test scenarios (SauceDemo)
+- Locators (CSS, XPath, Role-based, Text-based)
+- Element interactions (click, fill, keyboard input)
+- Cookie and storage management
+- Real-world test scenarios (SauceDemo, Cura Website)
 
 ## 🚀 Getting Started
 
@@ -58,6 +61,11 @@ tests/
 │   ├── 220_gotoCommands.spec.ts           # Navigation commands
 │   ├── 221_reffer_command.spec.ts         # Referrer and navigation
 │   ├── 222_Automation_app.vwo.com.spec.ts # VWO app automation
+│   ├── 223_X.Path.spec.ts                 # XPath locator examples
+│   ├── 224_GetRole.spec.ts                # GetByRole locator testing
+│   ├── 225_CSS_Selector.spec.ts           # CSS selector patterns
+│   ├── 226_PressSeqyuentially.spec.ts     # Sequential key press testing
+│   ├── 227_cookie.spec.ts                 # Cookie management
 │   └── index.html                         # Test HTML file
 └── Tasks/
     ├── Task_21_april/
@@ -126,6 +134,11 @@ npx ts-node tests/02_first_test/213_multiple_context.spec.ts
 - **220_gotoCommands.spec.ts**: Navigation commands and URL handling
 - **221_reffer_command.spec.ts**: Referrer and navigation patterns
 - **222_Automation_app.vwo.com.spec.ts**: Real-world automation on VWO app
+- **223_X.Path.spec.ts**: XPath locator examples and patterns
+- **224_GetRole.spec.ts**: GetByRole locator testing and usage
+- **225_CSS_Selector.spec.ts**: CSS selector patterns and best practices
+- **226_PressSeqyuentially.spec.ts**: Sequential keyboard key press testing
+- **227_cookie.spec.ts**: Cookie management and handling
 - **index.html**: Test HTML file for practice
 
 ### 4. Real-World Tasks (`Tests/`)
@@ -148,6 +161,13 @@ npx ts-node tests/02_first_test/213_multiple_context.spec.ts
   - Appointment booking workflows
   - Form validation
   - User interactions
+
+#### Task_25_april/
+
+- **Task_get_By_role.spec.ts**: Comprehensive getByRole locator testing
+  - Role-based element selection
+  - Accessibility-focused testing
+  - Best practices for locators
 
 ## ⚙️ Configuration
 
@@ -263,10 +283,11 @@ test("multiple contexts", async () => {
 
 1. Start with `01_Basics/` tests for fundamentals
 2. Move to `02_first_test/` for core concepts (contexts, pages)
-3. Practice with `03_Locators_Commandas/` for locators and commands
+3. Practice with `03_Locators_Commandas/` for locators, commands, and interactions
 4. Apply with `Tests/Task_21_april/` for real-world SauceDemo scenarios
 5. Advance with `Tests/Task_23_april/` for complex application automation
-6. Experiment with different configurations and options
+6. Master locators with `Tests/Task_25_april/` for role-based element selection
+7. Experiment with different configurations and options
 
 ## 💡 Tips
 
