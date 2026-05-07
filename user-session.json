@@ -1,0 +1,484 @@
+{
+  "cookies": [
+    {
+      "name": "_ga",
+      "value": "GA1.2.2041858314.1778135542",
+      "domain": ".vwo.com",
+      "path": "/",
+      "expires": 1812695542.186481,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_gid",
+      "value": "GA1.2.661075308.1778135542",
+      "domain": ".vwo.com",
+      "path": "/",
+      "expires": 1778221942,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_vwo_uuid_v2",
+      "value": "DCA33382FD15B428D7DCFB257F5D69C51|8be23258e357bead1e950b0c7e19b668",
+      "domain": ".vwo.com",
+      "path": "/",
+      "expires": 1809757942,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_vwo_uuid",
+      "value": "DCA33382FD15B428D7DCFB257F5D69C51",
+      "domain": ".vwo.com",
+      "path": "/",
+      "expires": 1809692494,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://vwo.com",
+      "_crHasCrossSiteAncestor": false
+    },
+    {
+      "name": "_vis_opt_exp_360_combi",
+      "value": "2",
+      "domain": ".vwo.com",
+      "path": "/",
+      "expires": 1786775542,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://vwo.com",
+      "_crHasCrossSiteAncestor": false
+    },
+    {
+      "name": "_vis_opt_s",
+      "value": "1%7C",
+      "domain": ".vwo.com",
+      "path": "/",
+      "expires": 1786775542,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://vwo.com",
+      "_crHasCrossSiteAncestor": false
+    },
+    {
+      "name": "_vis_opt_test_cookie",
+      "value": "1",
+      "domain": ".vwo.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://vwo.com",
+      "_crHasCrossSiteAncestor": false
+    },
+    {
+      "name": "_vwo_ssm",
+      "value": "1",
+      "domain": ".vwo.com",
+      "path": "/",
+      "expires": 1809671542,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://vwo.com",
+      "_crHasCrossSiteAncestor": false
+    },
+    {
+      "name": "_vis_opt_exp_222_combi",
+      "value": "2",
+      "domain": ".vwo.com",
+      "path": "/",
+      "expires": 1786775542,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://vwo.com",
+      "_crHasCrossSiteAncestor": false
+    },
+    {
+      "name": "_vis_opt_exp_299_combi",
+      "value": "2",
+      "domain": ".vwo.com",
+      "path": "/",
+      "expires": 1786775542,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://vwo.com",
+      "_crHasCrossSiteAncestor": false
+    },
+    {
+      "name": "_vis_opt_exp_420_combi",
+      "value": "2",
+      "domain": ".vwo.com",
+      "path": "/",
+      "expires": 1786775542,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://vwo.com",
+      "_crHasCrossSiteAncestor": false
+    },
+    {
+      "name": "_vis_opt_exp_303_combi",
+      "value": "2",
+      "domain": ".vwo.com",
+      "path": "/",
+      "expires": 1786775542,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://vwo.com",
+      "_crHasCrossSiteAncestor": false
+    },
+    {
+      "name": "_vis_opt_exp_318_combi",
+      "value": "2",
+      "domain": ".vwo.com",
+      "path": "/",
+      "expires": 1786775542,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://vwo.com",
+      "_crHasCrossSiteAncestor": false
+    },
+    {
+      "name": "_gat",
+      "value": "1",
+      "domain": ".vwo.com",
+      "path": "/",
+      "expires": 1778135603,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "YSC",
+      "value": "xmvWit555VA",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://vwo.com",
+      "_crHasCrossSiteAncestor": true
+    },
+    {
+      "name": "VISITOR_INFO1_LIVE",
+      "value": "jMf59Qask9E",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1793687544.356505,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://vwo.com",
+      "_crHasCrossSiteAncestor": true
+    },
+    {
+      "name": "VISITOR_PRIVACY_METADATA",
+      "value": "CgJJThIEGgAgHw%3D%3D",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1793687544.356526,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://vwo.com",
+      "_crHasCrossSiteAncestor": true
+    },
+    {
+      "name": "__Secure-YNID",
+      "value": "18.YT=gvKNZXWfAmbIyFql-GX8y9ORJz9rRPqz4PNYk_9-UDGsjpEqXmrce0EK7KqM9ZBYtkmJS1hqUHfiA6MGxTJhVyCzi13SW_E_hFatIzWpbQBQb0CzMtK0yyz-Ko-I27LQPKLZOJEsScW0nGmDR4F5oZli9UlWlEJo6yn51ieXjrO9bdyzUm3HPVPyypRYCXDRcpJXw-tnlkyAAGa8hiTA1KNEcrYVnvPannzVWj2MiGsP_2KBx42UxwJnN-qt28qOtF7i3HahQI3uqql6xzMSLFdltvnCAvf_Dbkiy46J-v0lPS9KBvNVOXzBkEEHgOdr9hYTj3FqaHwR5YKGE0U0Fw",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1793687543.356437,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://vwo.com",
+      "_crHasCrossSiteAncestor": true
+    },
+    {
+      "name": "__Secure-ROLLOUT_TOKEN",
+      "value": "CK3Eka3jgqq4pAEQ1MXPi8emlAMY49Hoi8emlAM%3D",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1793687544.356544,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://vwo.com",
+      "_crHasCrossSiteAncestor": true
+    },
+    {
+      "name": "_gcl_au",
+      "value": "1.1.8841733.1778135543.967784262.1778135547.1778135547",
+      "domain": ".vwo.com",
+      "path": "/",
+      "expires": 1785911543,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "IDE",
+      "value": "AHWqTUmm7E2O43Tr7dQHybjbsZBhu7H6E4y7JBdJrJEQwZGS_fZUbZ3nf6CtD_Wo",
+      "domain": ".doubleclick.net",
+      "path": "/",
+      "expires": 1812695547.282481,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "vwo_logged_in",
+      "value": "1",
+      "domain": ".vwo.com",
+      "path": "/",
+      "expires": 1778142755.746389,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "vwo_ca",
+      "value": "1227004",
+      "domain": "app.vwo.com",
+      "path": "/",
+      "expires": 1778142754.746457,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "vwo",
+      "value": "eyJ1c2VySWQiOiIxNzExNTQzIiwiYWNjb3VudElkIjoiMTIyNzAwNCIsInRva2VuIjoiSjRxcUluZVVUVm5QT2tfLTBGQUVkS2hPeGxZejBYVUticEpxN0tXUHZHSE1LejBoM216MGp5cHZPeGVIS0dCVF9WSkJ5QTRUVVhGaWd5dy1sVUZzOWciLCJ2YWxpZGl0eSI6IjcyMDAiLCJ2ZXJzaW9uIjoxLCJoYXNoIjoiNDNkZTM2NGNkN2M2N2YxM2RiZjE2MGI3ZjUxOTRlMzFmNTIzN2MzZSJ9",
+      "domain": "app.vwo.com",
+      "path": "/",
+      "expires": 1778142754.746501,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://vwo.com",
+      "_crHasCrossSiteAncestor": false
+    },
+    {
+      "name": "vwo",
+      "value": "eyJ1c2VySWQiOiIxNzExNTQzIiwiYWNjb3VudElkIjoiMTIyNzAwNCIsInRva2VuIjoiSjRxcUluZVVUVm5QT2tfLTBGQUVkS2hPeGxZejBYVUticEpxN0tXUHZHSE1LejBoM216MGp5cHZPeGVIS0dCVF9WSkJ5QTRUVVhGaWd5dy1sVUZzOWciLCJ2YWxpZGl0eSI6IjcyMDAiLCJ2ZXJzaW9uIjoxLCJoYXNoIjoiNDNkZTM2NGNkN2M2N2YxM2RiZjE2MGI3ZjUxOTRlMzFmNTIzN2MzZSJ9",
+      "domain": "app.vwo.com",
+      "path": "/",
+      "expires": 1778142754.746544,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "XSRF-TOKEN",
+      "value": "ce5afa0b19ebe27c6135975ed6bbe941e071a838",
+      "domain": "app.vwo.com",
+      "path": "/",
+      "expires": 1778142754.746571,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "lang",
+      "value": "en",
+      "domain": "app.vwo.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_vis_opt_exp_341_combi",
+      "value": "2",
+      "domain": ".vwo.com",
+      "path": "/",
+      "expires": 1786775553,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://vwo.com",
+      "_crHasCrossSiteAncestor": false
+    },
+    {
+      "name": "_vis_opt_exp_313_combi",
+      "value": "2",
+      "domain": ".vwo.com",
+      "path": "/",
+      "expires": 1786775554,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://vwo.com",
+      "_crHasCrossSiteAncestor": false
+    },
+    {
+      "name": "_vwo_ds",
+      "value": "3%3Aa_1%2Ct_1%3A0%241778135541%3A24.82506955%3A395_1_0_2%2C397_1_0_2%3A16_1%2C22_1%2C42_1%2C59_1%2C66_1%2C67_1%2C68_1%3A355_1%2C172_1%2C15_1%2C14_1%3A0%3A1778135541%3A1778135541%3A2%3A420_1778135542%3B360_1778135553%3B222_1778135555%3B299_1778135555",
+      "domain": ".vwo.com",
+      "path": "/",
+      "expires": 1785911555,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://vwo.com",
+      "_crHasCrossSiteAncestor": false
+    },
+    {
+      "name": "_vwo_sn",
+      "value": "0%3A7%3Ar2.visualwebsiteoptimizer.com%3A4%3A1%3Areferrer%3D%3A9",
+      "domain": ".vwo.com",
+      "path": "/",
+      "expires": 1778137355,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://vwo.com",
+      "_crHasCrossSiteAncestor": false
+    },
+    {
+      "name": "ajs_user_id",
+      "value": "1711543",
+      "domain": ".vwo.com",
+      "path": "/",
+      "expires": 1809671555,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "ajs_anonymous_id",
+      "value": "7a651eee-ab31-4f02-8121-df93c591db3a",
+      "domain": ".vwo.com",
+      "path": "/",
+      "expires": 1809671555,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_LBVC51CNX9",
+      "value": "GS2.2.s1778135544$o1$g1$t1778135556$j48$l0$h0",
+      "domain": ".vwo.com",
+      "path": "/",
+      "expires": 1812695556.074208,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://app.vwo.com",
+      "localStorage": [
+        {
+          "name": "lastDataRegionCacheKey",
+          "value": "AS01"
+        },
+        {
+          "name": "dataRegionCacheKey-opg73@singleuseemail.site",
+          "value": "{\"accountId\":1227004,\"region\":\"AS01\"}"
+        },
+        {
+          "name": "isCachedLoad",
+          "value": "1"
+        },
+        {
+          "name": "_vwo_eventHist",
+          "value": "{\"vwo_pageView\":[{\"page\":{\"url\":\"https://app.vwo.com/#login\"},\"VWO\":{\"firedTime\":1778135542697},\"type\":\"vwo_pageView\",\"ts\":1778135542696},{\"page\":{\"url\":\"https://app.vwo.com/#/dashboard/get-started?accountId=1227004\"},\"VWO\":{\"firedTime\":1778135553159},\"type\":\"vwo_pageView\",\"ts\":1778135553159},{\"page\":{\"url\":\"https://app.vwo.com/#/dashboard/get-started?accountId=1227004\"},\"VWO\":{\"firedTime\":1778135553276},\"type\":\"vwo_pageView\",\"ts\":1778135553276},{\"page\":{\"url\":\"https://app.vwo.com/#/dashboard/get-started?accountId=1227004\"},\"VWO\":{\"firedTime\":1778135554166},\"type\":\"vwo_pageView\",\"ts\":1778135554166},{\"page\":{\"url\":\"https://app.vwo.com/#/dashboard/get-started?accountId=1227004\"},\"VWO\":{\"firedTime\":1778135554213},\"type\":\"vwo_pageView\",\"ts\":1778135554213},{\"page\":{\"url\":\"https://app.vwo.com/#/dashboard/get-started?accountId=1227004\"},\"VWO\":{\"firedTime\":1778135554553},\"type\":\"vwo_pageView\",\"ts\":1778135554553},{\"page\":{\"url\":\"https://app.vwo.com/#/dashboard/get-started?accountId=1227004\"},\"VWO\":{\"firedTime\":1778135554579},\"type\":\"vwo_pageView\",\"ts\":1778135554579}]}"
+        },
+        {
+          "name": "ls.isNavCollapsed",
+          "value": "false"
+        },
+        {
+          "name": "_vwo_eventHistLastSession",
+          "value": "{\"vwo_pageView\":[{\"page\":{\"url\":\"https://app.vwo.com/#login\"},\"VWO\":{\"firedTime\":1778135542697},\"type\":\"vwo_pageView\",\"ts\":1778135542696}]}"
+        },
+        {
+          "name": "_vwo_nlsCache",
+          "value": "{\"hm_root_monitoring_sent\":\"true\",\"asts\":[\"https%3A%2F%2Fapp.vwo.com%2Fjs%2Fiti-qU4ARaGf.css\",\"https%3A%2F%2Fapp.vwo.com%2Fjs%2Flogin_inject-BGnl49b1.css\",\"https%3A%2F%2Fapp.vwo.com%2Fjs%2FAppController-B1vHz4vN.css\",\"https%3A%2F%2Fapp.vwo.com%2Fjs%2FColorPickerRendererDirective-QLdm0KKL.css\"]}"
+        },
+        {
+          "name": "_gcl_ls",
+          "value": "{\"schema\":\"gcl\",\"version\":1,\"gcl_ctr\":{\"value\":{\"value\":0,\"timeouts\":0,\"errors\":0,\"eopCount\":0,\"creationTimeMs\":1778135543295},\"expires\":1785911543295}}"
+        },
+        {
+          "name": "currency_1227004",
+          "value": "{\"label\":\"INR\",\"symbol\":\"₹\",\"planKey\":\"primaryPrice\"}"
+        },
+        {
+          "name": "isABTMergedTheme",
+          "value": "false"
+        },
+        {
+          "name": "_vwo_eventHistSession",
+          "value": "{\"vwo_pageView\":[{\"page\":{\"url\":\"https://app.vwo.com/#login\"},\"VWO\":{\"firedTime\":1778135542697},\"type\":\"vwo_pageView\"},{\"page\":{\"url\":\"https://app.vwo.com/#/dashboard/get-started?accountId=1227004\"},\"VWO\":{\"firedTime\":1778135553159},\"type\":\"vwo_pageView\"},{\"page\":{\"url\":\"https://app.vwo.com/#/dashboard/get-started?accountId=1227004\"},\"VWO\":{\"firedTime\":1778135553276},\"type\":\"vwo_pageView\"},{\"page\":{\"url\":\"https://app.vwo.com/#/dashboard/get-started?accountId=1227004\"},\"VWO\":{\"firedTime\":1778135554166},\"type\":\"vwo_pageView\"},{\"page\":{\"url\":\"https://app.vwo.com/#/dashboard/get-started?accountId=1227004\"},\"VWO\":{\"firedTime\":1778135554213},\"type\":\"vwo_pageView\"},{\"page\":{\"url\":\"https://app.vwo.com/#/dashboard/get-started?accountId=1227004\"},\"VWO\":{\"firedTime\":1778135554553},\"type\":\"vwo_pageView\"},{\"page\":{\"url\":\"https://app.vwo.com/#/dashboard/get-started?accountId=1227004\"},\"VWO\":{\"firedTime\":1778135554579},\"type\":\"vwo_pageView\"}]}"
+        },
+        {
+          "name": "previousLoginDetails",
+          "value": "{\"email\":\"opg73@singleuseemail.site\",\"state\":\"normal\",\"userId\":1711543}"
+        },
+        {
+          "name": "_vwo_visProps",
+          "value": "{\"isVwoAiChatEnabled\":false,\"extension_installed\":false}"
+        },
+        {
+          "name": "vwo-theme",
+          "value": "auto"
+        },
+        {
+          "name": "vwo_fme_data",
+          "value": "{\"vwo_fme_settings\":{\"settings\":{\"holdouts\":{},\"sdkKey\":\"MDA4ZDQ1MDUzMjgyMjVmNmE5YjliYjM4MGQyYTkzMTU=\",\"accountId\":1082778,\"version\":1,\"usageStatsAccountId\":1184071,\"lastUpdatedOn\":1774440631,\"features\":[{\"key\":\"onboardingOverlay\",\"status\":\"ON\",\"impactCampaign\":{},\"id\":3,\"type\":\"FEATURE_FLAG\",\"rules\":[{\"variationId\":1,\"type\":\"FLAG_PERSONALIZE\",\"ruleKey\":\"showOverlayVariation1\",\"campaignId\":6},{\"ruleKey\":\"showOverlay\",\"type\":\"FLAG_TESTING\",\"campaignId\":5}],\"name\":\"Onboarding Overlay\",\"metrics\":[{\"id\":1,\"type\":\"CUSTOM_GOAL\",\"identifier\":\"productSelectionCompleted\"}]},{\"key\":\"upgradeMtuPurchase\",\"status\":\"ON\",\"impactCampaign\":{},\"id\":5,\"type\":\"FEATURE_FLAG\",\"rules\":[{\"ruleKey\":\"track25KPurchaseOption\",\"type\":\"FLAG_TESTING\",\"campaignId\":7}],\"name\":\"upgradeMtuPurchase\",\"metrics\":[{\"id\":1,\"type\":\"CUSTOM_GOAL\",\"identifier\":\"minimumMtu\"},{\"id\":2,\"type\":\"CUSTOM_GOAL\",\"identifier\":\"nonMinMtu\"}]},{\"key\":\"pricingContactSales\",\"status\":\"ON\",\"impactCampaign\":{},\"id\":2,\"type\":\"FEATURE_FLAG\",\"rules\":[{\"variationId\":1,\"type\":\"FLAG_PERSONALIZE\",\"ruleKey\":\"submitModal\",\"campaignId\":4}],\"name\":\"Pricing - Contact Sales\",\"metrics\":[{\"id\":1,\"type\":\"CUSTOM_GOAL\",\"identifier\":\"requestedContactSales\"}]}],\"campaigns\":[{\"isForcedVariationEnabled\":false,\"key\":\"pricingContactSales_submitModal\",\"status\":\"RUNNING\",\"id\":4,\"type\":\"FLAG_PERSONALIZE\",\"name\":\"Pricing - Contact Sales : Personalize\",\"segments\":{},\"variations\":[{\"id\":1,\"variables\":[{\"id\":1,\"type\":\"boolean\",\"value\":false,\"key\":\"showSubmitModal\"}],\"segments\":{},\"weight\":100,\"name\":\"Submit-Modal\"}],\"isAlwaysCheckSegment\":false},{\"isForcedVariationEnabled\":false,\"key\":\"onboardingOverlay_showOverlay\",\"percentTraffic\":100,\"status\":\"RUNNING\",\"id\":5,\"type\":\"FLAG_TESTING\",\"name\":\"Onboarding Overlay : ShowOverlay\",\"segments\":{},\"variations\":[{\"id\":1,\"variables\":[{\"id\":1,\"type\":\"boolean\",\"value\":false,\"key\":\"ShowOverlay\"}],\"weight\":1,\"name\":\"Default\"},{\"id\":2,\"variables\":[{\"id\":1,\"type\":\"boolean\",\"value\":true,\"key\":\"ShowOverlay\"}],\"weight\":99,\"name\":\"Variation-1\"}],\"isAlwaysCheckSegment\":false},{\"isForcedVariationEnabled\":false,\"key\":\"onboardingOverlay_showOverlayVariation1\",\"status\":\"RUNNING\",\"id\":6,\"type\":\"FLAG_PERSONALIZE\",\"name\":\"Onboarding Overlay : Personalize\",\"segments\":{},\"variations\":[{\"id\":1,\"variables\":[{\"id\":1,\"type\":\"boolean\",\"value\":true,\"key\":\"ShowOverlay\"}],\"segments\":{},\"weight\":100,\"name\":\"Show-Overlay-Variation-1\"}],\"isAlwaysCheckSegment\":false},{\"isForcedVariationEnabled\":false,\"key\":\"upgradeMtuPurchase_track25KPurchaseOption\",\"percentTraffic\":100,\"status\":\"RUNNING\",\"id\":7,\"type\":\"FLAG_TESTING\",\"name\":\"upgradeMtuPurchase : Track 25K Purchase option\",\"segments\":{},\"variations\":[{\"id\":1,\"variables\":[{\"id\":1,\"type\":\"boolean\",\"value\":false,\"key\":\"upgradeMtuPurchase\"}],\"weight\":50,\"name\":\"Default\"},{\"id\":2,\"variables\":[{\"id\":1,\"type\":\"boolean\",\"value\":true,\"key\":\"upgradeMtuPurchase\"}],\"weight\":50,\"name\":\"Variation-1\"}],\"isAlwaysCheckSegment\":false}],\"collectionPrefix\":\"as01\"},\"timestamp\":1778135553283},\"onboardingOverlay_1711543\":{\"featureKey\":\"onboardingOverlay\",\"userId\":1711543,\"experimentId\":6,\"experimentKey\":\"onboardingOverlay_showOverlayVariation1\",\"experimentVariationId\":1}}"
+        },
+        {
+          "name": "ls.rootState",
+          "value": "{\"name\":\"dashboard.get-started\",\"params\":{}}"
+        },
+        {
+          "name": "vwoSn",
+          "value": "{\"cu\":\"https%3A%2F%2Fapp.vwo.com%2F%23login\",\"r\":\"\",\"lt\":\"1778135547\",\"v\":\"0.1.0\"}"
+        },
+        {
+          "name": "accountId",
+          "value": "1227004"
+        },
+        {
+          "name": "ajs_anonymous_id",
+          "value": "\"7a651eee-ab31-4f02-8121-df93c591db3a\""
+        },
+        {
+          "name": "ajs_user_id",
+          "value": "\"1711543\""
+        }
+      ]
+    },
+    {
+      "origin": "https://www.youtube.com",
+      "localStorage": [
+        {
+          "name": "ytidb::LAST_RESULT_ENTRY_KEY",
+          "value": "{\"data\":{\"hasSucceededOnce\":true},\"expiration\":1780727547642,\"creation\":1778135547642}"
+        },
+        {
+          "name": "yt-icons-last-purged",
+          "value": "1772519544808"
+        }
+      ]
+    }
+  ]
+}
