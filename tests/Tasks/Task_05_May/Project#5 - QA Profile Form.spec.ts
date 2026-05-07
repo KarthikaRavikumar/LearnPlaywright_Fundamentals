@@ -46,4 +46,3 @@ test("Fill The form and submit the Profile ", async ({ page }) => {
   );
   await expect(page.locator("#submission-output")).toContainText("Asia");
 });
-¢
