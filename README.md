@@ -71,8 +71,14 @@ tests/
     ├── Task_21_april/
     │   ├── Task_Multiple_Context.spec.ts      # Multiple context with SauceDemo
     │   └── Task_Same_context_multile_pages.spec.ts # Multiple pages in single context
-    └── Task_23_april/
-        └── Project#2_Cura_Website_Automation.spec.ts # Cura website automation
+    ├── Task_23_april/
+    │   └── Project#2_Cura_Website_Automation.spec.ts # Cura website automation
+    ├── Task_25_april/
+    │   └── Task_get_By_role.spec.ts           # Role-based element selection
+    ├── Task_28_april/
+    │   └── Error_message_calidation.spec.ts   # Error message validation
+    └── Task_05_May/
+        └── Project#5_QA_Profile_Form.spec.ts  # QA Profile form automation
 ```
 
 ## 🧪 Running Tests
@@ -168,6 +174,20 @@ npx ts-node tests/02_first_test/213_multiple_context.spec.ts
   - Role-based element selection
   - Accessibility-focused testing
   - Best practices for locators
+
+#### Task_28_april/
+
+- **Error_message_calidation.spec.ts**: Error message validation testing
+
+#### Task_05_May/
+
+- **Project#5_QA_Profile_Form.spec.ts**: QA Profile form automation
+  - Form filling with various input types
+  - Dropdown selection
+  - Radio button and checkbox handling
+  - Date input handling
+  - File upload functionality
+  - Form submission and validation
 
 ## ⚙️ Configuration
 

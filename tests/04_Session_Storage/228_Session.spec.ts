@@ -19,7 +19,9 @@ async function saveSession() {
   await page.waitForURL(/#\/(dashboard|home)/, { timeout: 15000 });
   await page.waitForTimeout(3000);
 
-  await context.storageState({ path: "./user-session.json" });
+  await context.storageState({
+    path: "user-session.json",
+  });
   console.log("Session saved to user-session.json ✅");
 
   await page.waitForTimeout(2000);
