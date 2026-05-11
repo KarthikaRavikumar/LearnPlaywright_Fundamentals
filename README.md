@@ -67,6 +67,10 @@ tests/
 │   ├── 226_PressSeqyuentially.spec.ts     # Sequential key press testing
 │   ├── 227_cookie.spec.ts                 # Cookie management
 │   └── index.html                         # Test HTML file
+├── 04_Session_Storage/
+│   └── 229_Test_vwo.com.spec.ts           # Session storage and VWO automation
+├── 05_Allure_report/
+│   └── Allure reporting configuration     # Allure test reporting
 └── Tasks/
     ├── Task_21_april/
     │   ├── Task_Multiple_Context.spec.ts      # Multiple context with SauceDemo
@@ -77,6 +81,8 @@ tests/
     │   └── Task_get_By_role.spec.ts           # Role-based element selection
     ├── Task_28_april/
     │   └── Error_message_calidation.spec.ts   # Error message validation
+    ├── Task_02_May/
+    │   └── Advanced test scenarios             # May 2nd task collection
     └── Task_05_May/
         └── Project#5_QA_Profile_Form.spec.ts  # QA Profile form automation
 ```
@@ -179,6 +185,11 @@ npx ts-node tests/02_first_test/213_multiple_context.spec.ts
 
 - **Error_message_calidation.spec.ts**: Error message validation testing
 
+#### Task_02_May/
+
+- Advanced test scenarios and workflows
+- Integration testing patterns
+
 #### Task_05_May/
 
 - **Project#5_QA_Profile_Form.spec.ts**: QA Profile form automation
@@ -188,6 +199,15 @@ npx ts-node tests/02_first_test/213_multiple_context.spec.ts
   - Date input handling
   - File upload functionality
   - Form submission and validation
+
+### 5. Session Storage & Advanced Features
+
+#### 04_Session_Storage/
+
+- **229_Test_vwo.com.spec.ts**: Session storage and local storage management
+  - Session state persistence
+  - VWO app automation
+  - Storage-based testing patterns
 
 ## ⚙️ Configuration
 
@@ -304,10 +324,13 @@ test("multiple contexts", async () => {
 1. Start with `01_Basics/` tests for fundamentals
 2. Move to `02_first_test/` for core concepts (contexts, pages)
 3. Practice with `03_Locators_Commandas/` for locators, commands, and interactions
-4. Apply with `Tests/Task_21_april/` for real-world SauceDemo scenarios
-5. Advance with `Tests/Task_23_april/` for complex application automation
-6. Master locators with `Tests/Task_25_april/` for role-based element selection
-7. Experiment with different configurations and options
+4. Explore `04_Session_Storage/` for state management and storage handling
+5. Apply with `Tests/Task_21_april/` for real-world SauceDemo scenarios
+6. Advance with `Tests/Task_23_april/` for complex application automation
+7. Master locators with `Tests/Task_25_april/` for role-based element selection
+8. Validate with `Tests/Task_28_april/` for error handling
+9. Build forms with `Tests/Task_05_May/` for comprehensive form testing
+10. Use custom TTA reports for detailed test analytics and monitoring
 
 ## 💡 Tips
 
@@ -317,7 +340,55 @@ test("multiple contexts", async () => {
 - Check `playwright.config.ts` for global settings
 - Each context is independent - great for multi-user testing
 
-## 🐛 Debugging
+## � Test Reports
+
+### Available Reporters
+
+This project includes three powerful reporting systems:
+
+#### 1. **Custom TTA Reporter** ⭐ (New!)
+
+Advanced real-time test execution report with rich analytics:
+
+- Real-time test status updates
+- Beautiful HTML dashboard with test statistics
+- Pass/Fail breakdown with detailed metrics
+- Step-by-step test execution logs
+- Screenshot gallery with modal preview
+- Video playback support (on failures)
+- Trace viewer integration
+- Filter by status and priority
+- Historical test tracking
+
+**View Report:**
+
+```bash
+open tta-report/index.html
+```
+
+#### 2. **Playwright HTML Reporter** (Default)
+
+Standard Playwright reporter with detailed test information:
+
+```bash
+npx playwright show-report
+```
+
+#### 3. **Allure Reporter**
+
+Advanced reporting with detailed analytics:
+
+```bash
+allure serve allure-results
+```
+
+### Report Locations
+
+- **TTA Custom Report**: `tta-report/index.html`
+- **Playwright Report**: `playwright-report/index.html`
+- **Allure Results**: `allure-results/`
+
+## �🐛 Debugging
 
 ### Enable debug mode
 
@@ -329,6 +400,12 @@ npx playwright test --debug
 
 ```bash
 npx playwright show-report
+```
+
+### View TTA Report
+
+```bash
+open tta-report/index.html
 ```
 
 ### Enable verbose logging
@@ -343,6 +420,34 @@ DEBUG=pw:api npx playwright test
 - Playwright handles browser and context management
 - Each test file follows the `.spec.ts` naming convention
 - Tests can be run in parallel or sequentially
+
+## 🆕 Recent Updates (May 2026)
+
+### Custom TTA Reporter Implementation
+
+- **Date**: May 11, 2026
+- **Status**: ✅ Completed
+- **Features Added**:
+  - Real-time test execution reporting
+  - Interactive HTML dashboard with analytics
+  - Screenshots gallery with modal preview
+  - Video playback for failed tests
+  - Trace viewer integration
+  - Test history tracking
+  - Advanced filtering and search capabilities
+
+### Configuration Changes
+
+- Added custom TTA reporter to `playwright.config.ts`
+- Enabled screenshot capture on test failures
+- Enabled video recording for failed tests
+- Maintained compatibility with existing reporters (HTML, Allure)
+
+### New Test Categories
+
+- **04_Session_Storage**: Session and local storage management tests
+- **05_Allure_report**: Allure reporting configuration
+- **Task_02_May**: Advanced testing scenarios
 
 ## 🤝 Contributing
 
