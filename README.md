@@ -423,6 +423,17 @@ DEBUG=pw:api npx playwright test
 
 ## 🆕 Recent Updates (May 2026)
 
+### Latest Update (May 12, 2026)
+
+- **Date**: May 12, 2026
+- **Status**: ✅ Completed
+- **Updates**:
+  - Added new test categories for web tables and SVG handling
+  - Task_12_May: Extended testing scenarios
+  - Enhanced test reporting with additional metrics
+  - Continued expansion of test coverage
+  - Documentation updated with new test categories
+
 ### Custom TTA Reporter Implementation
 
 - **Date**: May 11, 2026
@@ -448,6 +459,9 @@ DEBUG=pw:api npx playwright test
 - **04_Session_Storage**: Session and local storage management tests
 - **05_Allure_report**: Allure reporting configuration
 - **Task_02_May**: Advanced testing scenarios
+- **07_Web_Tables**: Web table automation and handling
+- **12_Handle_SVG**: SVG element interaction and testing
+- **Task_12_May**: May 12th test scenarios
 
 ## 🤝 Contributing
 
