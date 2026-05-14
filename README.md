@@ -71,6 +71,18 @@ tests/
 │   └── 229_Test_vwo.com.spec.ts           # Session storage and VWO automation
 ├── 05_Allure_report/
 │   └── Allure reporting configuration     # Allure test reporting
+├── 06_Multiple_Elements/
+│   └── 231_Multiple_Elements.spec.ts       # Placeholder for multiple elements
+├── 12_Handle_SVG/
+│   ├── 248_SVG_Project.spec.ts            # SVG element interaction on Flipkart
+│   └── 249_SVG_Practice.spec.ts           # SVG shape clicking on practice widget
+├── 13_ShadowDOM/
+│   └── 251_shadow_dom.spec.ts             # Shadow DOM email/password form handling
+├── 14_File_upload/
+│   ├── 252_File_upload.spec.ts            # Single file upload test
+│   ├── 253_Multi_File_Upload.spec.ts      # Multi-file upload with buffers
+│   ├── file1.jpg                          # Test fixture image
+│   └── file2.jpg                          # Test fixture image
 └── Tasks/
     ├── Task_21_april/
     │   ├── Task_Multiple_Context.spec.ts      # Multiple context with SauceDemo
@@ -83,8 +95,10 @@ tests/
     │   └── Error_message_calidation.spec.ts   # Error message validation
     ├── Task_02_May/
     │   └── Advanced test scenarios             # May 2nd task collection
-    └── Task_05_May/
-        └── Project#5_QA_Profile_Form.spec.ts  # QA Profile form automation
+    ├── Task_05_May/
+    │   └── Project#5_QA_Profile_Form.spec.ts  # QA Profile form automation
+    └── Task_12_May_Project#8/
+        └── Task_02.spec.ts                     # Indian states map interaction
 ```
 
 ## 🧪 Running Tests
@@ -200,7 +214,40 @@ npx ts-node tests/02_first_test/213_multiple_context.spec.ts
   - File upload functionality
   - Form submission and validation
 
-### 5. Session Storage & Advanced Features
+#### Task_12_May_Project#8/
+
+- **Task_02.spec.ts**: Indian states map interaction
+  - Iterates through all 36 Indian states on interactive map
+  - Console logging for state verification
+  - State-specific element targeting
+
+### 5. SVG Handling (`12_Handle_SVG/`)
+
+- **248_SVG_Project.spec.ts**: SVG element interaction on Flipkart
+  - Locating SVG elements
+  - Visibility assertions
+  - SVG-based search UI interaction
+- **249_SVG_Practice.spec.ts**: SVG shape clicking on practice widget
+  - Clicking circle and bar SVG shapes
+  - Output text validation
+
+### 6. Shadow DOM (`13_ShadowDOM/`)
+
+- **251_shadow_dom.spec.ts**: Shadow DOM form handling
+  - Filling email/password in Shadow DOM card
+  - Nested Shadow DOM interaction
+  - Counter increment within Shadow DOM
+
+### 7. File Upload (`14_File_upload/`)
+
+- **252_File_upload.spec.ts**: Single file upload via `setInputFiles`
+  - Uploads file to the-internet.herokuapp.com
+  - Asserts uploaded filename
+- **253_Multi_File_Upload.spec.ts**: Multi-file upload with in-memory buffers
+  - Uploads multiple files (file1.jpg, file2.jpg)
+  - PatternFly demo page integration
+
+### 8. Session Storage & Advanced Features
 
 #### 04_Session_Storage/
 
@@ -330,7 +377,10 @@ test("multiple contexts", async () => {
 7. Master locators with `Tests/Task_25_april/` for role-based element selection
 8. Validate with `Tests/Task_28_april/` for error handling
 9. Build forms with `Tests/Task_05_May/` for comprehensive form testing
-10. Use custom TTA reports for detailed test analytics and monitoring
+10. Handle SVG elements with `12_Handle_SVG/` for graphical element interaction
+11. Master Shadow DOM with `13_ShadowDOM/` for traversing encapsulated components
+12. Test file uploads with `14_File_upload/` for single and multi-file scenarios
+13. Use custom TTA reports for detailed test analytics and monitoring
 
 ## 💡 Tips
 
@@ -423,16 +473,18 @@ DEBUG=pw:api npx playwright test
 
 ## 🆕 Recent Updates (May 2026)
 
-### Latest Update (May 12, 2026)
+### Latest Update (May 14, 2026)
 
-- **Date**: May 12, 2026
+- **Date**: May 14, 2026
 - **Status**: ✅ Completed
 - **Updates**:
-  - Added new test categories for web tables and SVG handling
-  - Task_12_May: Extended testing scenarios
-  - Enhanced test reporting with additional metrics
-  - Continued expansion of test coverage
-  - Documentation updated with new test categories
+  - Added **06_Multiple_Elements**: Placeholder for multiple element handling tests
+  - Added **12_Handle_SVG**: SVG element interaction (Flipkart search, shape clicking)
+  - Added **13_ShadowDOM**: Shadow DOM traversal and form filling
+  - Added **14_File_upload**: Single and multi-file upload tests with fixtures
+  - Task_12_May_Project#8: Enhanced with console logging for state verification
+  - Custom TTA reporter improvements
+  - README updated with new test categories and project structure
 
 ### Custom TTA Reporter Implementation
 

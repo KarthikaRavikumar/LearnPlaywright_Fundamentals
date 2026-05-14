@@ -49,6 +49,7 @@ interface TestData {
   error?: string;
   errorStack?: string;
   tags: string[];
+  consoleOutput?: string;
 }
 
 interface FileGroup {
@@ -112,6 +113,12 @@ class CustomTTAReporter implements Reporter {
       `║  🌐 Environment: ${(process.env.TEST_ENV || "UAT").padEnd(44)}║`,
     );
     console.log(
+      `║  ⚙️  Workers: ${String(config.workers || 1).padEnd(45)}║`,
+    );
+    console.log(
+      `║  📁 Projects: ${config.projects.map(p => p.name).join(", ").padEnd(44)}║`,
+    );
+    console.log(
       "╚════════════════════════════════════════════════════════════════╝\n",
     );
 
@@ -134,9 +141,12 @@ class CustomTTAReporter implements Reporter {
     this.testCounter++;
 
     const testFile = test.location.file.split("/").pop() || "";
-    console.log(`\n▶️  STARTING: ${test.title}`);
+    const testTags = test.tags?.length ? test.tags.join(", ") : "none";
+    console.log(`\n▶️  [${this.testCounter}] STARTING: ${test.title}`);
     console.log(`   📁 File: ${testFile}`);
     console.log(`   📍 Suite: ${test.parent.title}`);
+    console.log(`   🏷️  Tags: ${testTags}`);
+    console.log(`   🔄 Retry: ${test.retries ? `up to ${test.retries} times` : "none"}`);
     console.log("   ─────────────────────────────────────────────────────");
 
     const describePath: string[] = [];
@@ -159,55 +169,74 @@ class CustomTTAReporter implements Reporter {
       screenshots: [],
       steps: [],
       tags: test.tags || [],
+      consoleOutput: "",
     });
 
     this.updateReportRealTime();
   }
 
   onStepBegin(_test: TestCase, _result: TestResult, step: TestStep): void {
-    if (step.category === "test.step") {
-      console.log(`   ⏳ ${step.title}...`);
-    }
+    const categoryIcons: Record<string, string> = {
+      "test.step": "⏳",
+      "expect": "🔍",
+      "beforeEach": "🔄",
+      "afterEach": "🔄",
+      "beforeAll": "🛠️",
+      "afterAll": "🧹",
+      "fixture": "📦",
+      "hook": "🔗",
+    };
+    const icon = categoryIcons[step.category] || "⚙️";
+    console.log(`   ${icon} [${step.category}] ${step.title}...`);
   }
 
   onStepEnd(test: TestCase, _result: TestResult, step: TestStep): void {
-    if (step.category === "test.step") {
-      const duration = step.duration ? `(${step.duration}ms)` : "";
-      const status = step.error ? "❌" : "✅";
-      console.log(`   ${status} ${step.title} ${duration}`);
+    const duration = step.duration ? `(${step.duration}ms)` : "";
+    const status = step.error ? "❌" : "✅";
+    const categoryIcons: Record<string, string> = {
+      "test.step": "",
+      "expect": "🔍",
+      "beforeEach": "🔄",
+      "afterEach": "🔄",
+      "beforeAll": "🛠️",
+      "afterAll": "🧹",
+      "fixture": "📦",
+      "hook": "🔗",
+    };
+    const catIcon = categoryIcons[step.category] || "";
+    console.log(`   ${status} ${catIcon}${step.title} ${duration}`);
 
-      const testStartTime = this.testStartTimeMap.get(test.id) || Date.now();
-      const stepCounter = this.testStepCounterMap.get(test.id) || 0;
-      const testSteps = this.testStepsMap.get(test.id) || [];
+    const testStartTime = this.testStartTimeMap.get(test.id) || Date.now();
+    const stepCounter = this.testStepCounterMap.get(test.id) || 0;
+    const testSteps = this.testStepsMap.get(test.id) || [];
 
-      const stepStartTime = new Date(step.startTime).getTime();
-      const videoStartTime = stepStartTime - testStartTime;
-      const videoEndTime = videoStartTime + (step.duration || 0);
+    const stepStartTime = new Date(step.startTime).getTime();
+    const videoStartTime = stepStartTime - testStartTime;
+    const videoEndTime = videoStartTime + (step.duration || 0);
 
-      const stepData: StepData = {
-        title: step.title,
-        category: step.category,
-        duration: step.duration || 0,
-        status: step.error ? "failed" : "passed",
-        startTime: new Date(step.startTime).toLocaleTimeString(),
-        error: step.error?.message,
-        stackTrace: step.error?.stack,
-        consoleLogs: [],
-        stepIndex: stepCounter,
-        videoStartTime: Math.max(0, videoStartTime),
-        videoEndTime: Math.max(0, videoEndTime),
-      };
-      testSteps.push(stepData);
-      this.testStepsMap.set(test.id, testSteps);
-      this.testStepCounterMap.set(test.id, stepCounter + 1);
+    const stepData: StepData = {
+      title: step.title,
+      category: step.category,
+      duration: step.duration || 0,
+      status: step.error ? "failed" : "passed",
+      startTime: new Date(step.startTime).toLocaleTimeString(),
+      error: step.error?.message,
+      stackTrace: step.error?.stack,
+      consoleLogs: [],
+      stepIndex: stepCounter,
+      videoStartTime: Math.max(0, videoStartTime),
+      videoEndTime: Math.max(0, videoEndTime),
+    };
+    testSteps.push(stepData);
+    this.testStepsMap.set(test.id, testSteps);
+    this.testStepCounterMap.set(test.id, stepCounter + 1);
 
-      const runningTest = this.runningTests.get(test.id);
-      if (runningTest) {
-        runningTest.steps = testSteps;
-      }
-
-      this.updateReportRealTime();
+    const runningTest = this.runningTests.get(test.id);
+    if (runningTest) {
+      runningTest.steps = testSteps;
     }
+
+    this.updateReportRealTime();
   }
 
   onTestEnd(test: TestCase, result: TestResult): void {
@@ -235,9 +264,19 @@ class CustomTTAReporter implements Reporter {
     console.log(
       `   ${statusIcon} RESULT: ${status.toUpperCase()} | Duration: ${testTime}`,
     );
+    console.log(`   📄 Retries: ${result.retry}`);
     if (result.error) {
       console.log(`   ⚠️  Error: ${result.error.message?.substring(0, 80)}...`);
     }
+
+    const stdoutLogs = result.stdout || [];
+    if (stdoutLogs.length > 0) {
+      const logText = stdoutLogs.map(c => typeof c === "string" ? c : c.toString()).join("").trim();
+      if (logText) {
+        console.log(`   📝 Console Output:\n${logText.split("\n").map(l => `      ${l}`).join("\n")}`);
+      }
+    }
+
     console.log(
       `\n   📊 Running Total: ✅ ${this.suiteStats.passed} | ❌ ${this.suiteStats.failed} | ⏭️ ${this.suiteStats.skipped}`,
     );
@@ -286,6 +325,11 @@ class CustomTTAReporter implements Reporter {
 
     const tagMatches = test.title.match(/@\w+/g) || [];
 
+    const allStdout = [...(result.stdout || []), ...(result.stderr || [])]
+      .map(c => (typeof c === "string" ? c : Buffer.isBuffer(c) ? c.toString() : String(c)))
+      .join("")
+      .trim();
+
     const testData: TestData = {
       id: `test-${test.id}`,
       title: test.title,
@@ -303,6 +347,7 @@ class CustomTTAReporter implements Reporter {
       error: result.error?.message,
       errorStack: result.error?.stack,
       tags: tagMatches,
+      consoleOutput: allStdout || undefined,
     };
 
     this.testResults.push(testData);
@@ -398,9 +443,21 @@ class CustomTTAReporter implements Reporter {
       "╚════════════════════════════════════════════════════════════════╝",
     );
 
+    console.log(
+      `\n📊 File Breakdown:`,
+    );
+    for (const [file, group] of this.fileGroups) {
+      const fileName = file.split("/").pop() || file;
+      console.log(
+        `   📄 ${fileName}: ✅${group.stats.passed} ❌${group.stats.failed} ⏭️${group.stats.skipped} (${group.stats.total} total)`,
+      );
+    }
+
     console.log("\n📊 Generating TTA HTML Report...");
     await this.generateReport();
     console.log(`✅ Report generated: ${this.outputFile}`);
+    console.log(`📁 Report path: ${path.resolve(this.outputFile)}`);
+    console.log(`📜 History: ${path.resolve(path.dirname(this.outputFile), "history.html")}`);
   }
 
   private formatTime(date: Date): string {
@@ -961,6 +1018,21 @@ class CustomTTAReporter implements Reporter {
                         `
                             : ""
                         }
+                    </div>
+                </div>
+            </div>`;
+    }
+
+    if (test.consoleOutput) {
+      html += `
+            <div class="detail-section">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <span class="section-arrow">▶</span>
+                    📝 Console Output
+                </div>
+                <div class="section-content">
+                    <div class="test-console-output">
+                        ${test.consoleOutput.split("\n").map(line => `<div class="console-line">${this.escapeHtml(line)}</div>`).join("")}
                     </div>
                 </div>
             </div>`;
@@ -1625,6 +1697,17 @@ class CustomTTAReporter implements Reporter {
             gap: 6px;
         }
         .step-console { margin-bottom: 16px; }
+        .test-console-output {
+            background: var(--dark);
+            color: #a7f3d0;
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            line-height: 1.6;
+            max-height: 400px;
+            overflow-y: auto;
+        }
         .step-console-header {
             font-weight: 600;
             color: var(--dark);

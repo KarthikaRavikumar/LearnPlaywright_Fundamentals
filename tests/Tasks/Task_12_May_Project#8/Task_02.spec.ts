@@ -17,6 +17,7 @@ test.describe("Map Selection", () => {
 
     // Printing all 36 states and clicking on UP
     for (const state of states) {
+      console.log(state.trim());
       if (state.trim() === "Uttar Pradesh") {
         await page
           .locator(`//*[name()='path' and contains(@class,'INUP')]`)
