@@ -97,8 +97,10 @@ tests/
     │   └── Advanced test scenarios             # May 2nd task collection
     ├── Task_05_May/
     │   └── Project#5_QA_Profile_Form.spec.ts  # QA Profile form automation
-    └── Task_12_May_Project#8/
-        └── Task_02.spec.ts                     # Indian states map interaction
+    ├── Task_12_May_Project#8/
+    │   └── Task_02.spec.ts                     # Indian states map interaction
+    └── Task_14_May/
+        └── Project#09.spec.ts                  # Shadow DOM, Calendars
 ```
 
 ## 🧪 Running Tests
@@ -220,6 +222,13 @@ npx ts-node tests/02_first_test/213_multiple_context.spec.ts
   - Iterates through all 36 Indian states on interactive map
   - Console logging for state verification
   - State-specific element targeting
+
+#### Task_14_May/
+
+- **Project#09.spec.ts**: Shadow DOM and keyboard interactions
+  - Shadow DOM form filling (name, pizza, tools, password)
+  - Keyboard navigation (Tab, type)
+  - Click interaction within shadow DOM
 
 ### 5. SVG Handling (`12_Handle_SVG/`)
 
@@ -380,7 +389,8 @@ test("multiple contexts", async () => {
 10. Handle SVG elements with `12_Handle_SVG/` for graphical element interaction
 11. Master Shadow DOM with `13_ShadowDOM/` for traversing encapsulated components
 12. Test file uploads with `14_File_upload/` for single and multi-file scenarios
-13. Use custom TTA reports for detailed test analytics and monitoring
+13. Combine Shadow DOM with keyboard interactions in `Tests/Task_14_May/`
+14. Use custom TTA reports for detailed test analytics and monitoring
 
 ## 💡 Tips
 
@@ -482,6 +492,7 @@ DEBUG=pw:api npx playwright test
   - Added **12_Handle_SVG**: SVG element interaction (Flipkart search, shape clicking)
   - Added **13_ShadowDOM**: Shadow DOM traversal and form filling
   - Added **14_File_upload**: Single and multi-file upload tests with fixtures
+  - Added **Task_14_May/Project#09**: Shadow DOM and keyboard interaction test
   - Task_12_May_Project#8: Enhanced with console logging for state verification
   - Custom TTA reporter improvements
   - README updated with new test categories and project structure
