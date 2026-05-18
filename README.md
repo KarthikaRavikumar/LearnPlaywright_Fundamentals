@@ -72,7 +72,28 @@ tests/
 ├── 05_Allure_report/
 │   └── Allure reporting configuration     # Allure test reporting
 ├── 06_Multiple_Elements/
-│   └── 231_Multiple_Elements.spec.ts       # Placeholder for multiple elements
+│   ├── 231_Multiple_Elements.spec.ts      # Placeholder for multiple elements
+│   └── 07_Web_Tables/
+│       ├── 232_WebTable_Basic.spec.ts     # Basic web table handling
+│       └── 233_WebTabe_Dynamic.spec.ts    # Dynamic web table handling
+├── 08_Web_SelectFrames_iframes/
+│   ├── 234_Web_Spec.ts                    # Web select basics
+│   ├── 235_Select_FramesWeb.spec.ts       # Select and frames
+│   ├── 236_Advanced_SelectFrames2.spec.ts # Advanced select and frames
+│   ├── 237_Advanced_select_pro.spec.ts    # Advanced select patterns
+│   └── 238_Advanced_select_pro_v2.spec.ts # Advanced select v2
+├── 09_Frames_IFrames/
+│   ├── 239_iframe.spec.ts                 # Single iframe handling
+│   ├── 240_Multiple_frames.spec.ts        # Multiple frames
+│   └── 241_ifrmae_within_iframe.spec.ts   # Nested iframes
+├── 10_Keyboad_Hover_Drag_Drop/
+│   ├── 242_Keyboard.spec.ts               # Keyboard interactions
+│   ├── 247_Spicejet_hover.spec.ts         # Hover interactions
+│   ├── 244_Drag_Drop.spec.ts              # Drag and drop basics
+│   ├── 245_Drag_Drop_Advanced_Kanban.spec.ts # Advanced drag and drop (Kanban)
+│   └── 246_Right_click.spec.ts            # Right click / context menu
+├── 11_JS_Alert/
+│   └── 243_Js_Alert.spec.ts               # JavaScript alert handling
 ├── 12_Handle_SVG/
 │   ├── 248_SVG_Project.spec.ts            # SVG element interaction on Flipkart
 │   └── 249_SVG_Practice.spec.ts           # SVG shape clicking on practice widget
@@ -83,6 +104,10 @@ tests/
 │   ├── 253_Multi_File_Upload.spec.ts      # Multi-file upload with buffers
 │   ├── file1.jpg                          # Test fixture image
 │   └── file2.jpg                          # Test fixture image
+├── 15_File_Download/
+│   └── 254_File_Doenload.spec.ts          # File download handling
+├── 16_ScrollToElement/
+│   └── 255_Scroll_to_view.spec.ts         # Scroll to element
 └── Tasks/
     ├── Task_21_april/
     │   ├── Task_Multiple_Context.spec.ts      # Multiple context with SauceDemo
@@ -256,7 +281,57 @@ npx ts-node tests/02_first_test/213_multiple_context.spec.ts
   - Uploads multiple files (file1.jpg, file2.jpg)
   - PatternFly demo page integration
 
-### 8. Session Storage & Advanced Features
+### 8. File Download (`15_File_Download/`)
+
+- **254_File_Doenload.spec.ts**: File download handling
+  - Capturing and validating downloaded files
+  - Download path configuration
+
+### 9. Scroll to Element (`16_ScrollToElement/`)
+
+- **255_Scroll_to_view.spec.ts**: Scroll to element interactions
+  - Scrolling elements into view
+  - Handling lazy-loaded content
+
+### 10. Web Tables (`06_Multiple_Elements/07_Web_Tables/`)
+
+- **232_WebTable_Basic.spec.ts**: Basic web table handling
+  - Table row and cell selection
+  - Data extraction from static tables
+- **233_WebTabe_Dynamic.spec.ts**: Dynamic web table handling
+  - Pagination and dynamic content
+  - Searching and filtering table data
+
+### 11. Select & Frames (`08_Web_SelectFrames_iframes/`)
+
+- **234_Web_Spec.ts**: Web select basics
+- **235_Select_FramesWeb.spec.ts**: Select dropdowns and frames
+- **236_Advanced_SelectFrames2.spec.ts**: Advanced select and frame patterns
+- **237_Advanced_select_pro.spec.ts**: Advanced select operations
+- **238_Advanced_select_pro_v2.spec.ts**: Advanced select patterns v2
+
+### 12. Frames & IFrames (`09_Frames_IFrames/`)
+
+- **239_iframe.spec.ts**: Single iframe handling
+- **240_Multiple_frames.spec.ts**: Multiple frames interaction
+- **241_ifrmae_within_iframe.spec.ts**: Nested iframes
+
+### 13. Keyboard, Hover, Drag & Drop (`10_Keyboad_Hover_Drag_Drop/`)
+
+- **242_Keyboard.spec.ts**: Keyboard interactions
+- **247_Spicejet_hover.spec.ts**: Hover interactions (Spicejet)
+- **244_Drag_Drop.spec.ts**: Drag and drop basics
+- **245_Drag_Drop_Advanced_Kanban.spec.ts**: Advanced drag and drop (Kanban board)
+- **246_Right_click.spec.ts**: Right click / context menu handling
+
+### 14. JavaScript Alerts (`11_JS_Alert/`)
+
+- **243_Js_Alert.spec.ts**: JavaScript alert, confirm, and prompt handling
+  - Accepting and dismissing alerts
+  - Reading alert text
+  - Handling prompt input
+
+### 15. Session Storage & Advanced Features
 
 #### 04_Session_Storage/
 
@@ -386,11 +461,18 @@ test("multiple contexts", async () => {
 7. Master locators with `Tests/Task_25_april/` for role-based element selection
 8. Validate with `Tests/Task_28_april/` for error handling
 9. Build forms with `Tests/Task_05_May/` for comprehensive form testing
-10. Handle SVG elements with `12_Handle_SVG/` for graphical element interaction
-11. Master Shadow DOM with `13_ShadowDOM/` for traversing encapsulated components
-12. Test file uploads with `14_File_upload/` for single and multi-file scenarios
-13. Combine Shadow DOM with keyboard interactions in `Tests/Task_14_May/`
-14. Use custom TTA reports for detailed test analytics and monitoring
+10. Handle web tables with `06_Multiple_Elements/07_Web_Tables/` for table automation
+11. Practice select dropdowns and frames with `08_Web_SelectFrames_iframes/`
+12. Master iframes with `09_Frames_IFrames/` for nested frame handling
+13. Learn keyboard, hover, drag & drop with `10_Keyboad_Hover_Drag_Drop/`
+14. Handle JavaScript alerts with `11_JS_Alert/`
+15. Handle SVG elements with `12_Handle_SVG/` for graphical element interaction
+16. Master Shadow DOM with `13_ShadowDOM/` for traversing encapsulated components
+17. Test file uploads with `14_File_upload/` for single and multi-file scenarios
+18. Test file downloads with `15_File_Download/` for download handling
+19. Scroll to elements with `16_ScrollToElement/` for lazy-loaded content
+20. Combine Shadow DOM with keyboard interactions in `Tests/Task_14_May/`
+21. Use custom TTA reports for detailed test analytics and monitoring
 
 ## 💡 Tips
 
@@ -482,6 +564,20 @@ DEBUG=pw:api npx playwright test
 - Tests can be run in parallel or sequentially
 
 ## 🆕 Recent Updates (May 2026)
+
+### Latest Update (May 18, 2026)
+
+- **Date**: May 18, 2026
+- **Status**: ✅ Completed
+- **Updates**:
+  - Moved **07_Web_Tables** into `06_Multiple_Elements/` directory
+  - Added **08_Web_SelectFrames_iframes**: Select dropdowns and frame handling (5 test files)
+  - Added **09_Frames_IFrames**: Single, multiple, and nested iframe handling (3 test files)
+  - Added **10_Keyboad_Hover_Drag_Drop**: Keyboard, hover, drag & drop, right click (5 test files)
+  - Added **11_JS_Alert**: JavaScript alert, confirm, and prompt handling
+  - Added **15_File_Download**: File download handling and validation
+  - Added **16_ScrollToElement**: Scroll to element interactions
+  - README updated with new test categories, project structure, and learning path
 
 ### Latest Update (May 14, 2026)
 
