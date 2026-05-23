@@ -108,6 +108,22 @@ tests/
 │   └── 254_File_Doenload.spec.ts          # File download handling
 ├── 16_ScrollToElement/
 │   └── 255_Scroll_to_view.spec.ts         # Scroll to element
+├── 17_Expect_Assertions/
+│   ├── 256_Expec.spec.ts                  # Expect assertion examples
+│   ├── 257_URL_Assertion.spec.ts          # URL assertions
+│   ├── Expect_Assertions_Cheatsheet.md    # Assertions reference
+│   └── More_Expect_Examples.md            # Extended examples
+├── 18_Test_Hooks/
+│   ├── 258_Test_hook.spec.ts              # Test hooks (beforeEach/afterEach)
+│   ├── 259_Grouped_Test.spec.ts           # Grouped test execution
+│   ├── 260_Test_Before_After.spec.ts      # Before/After hooks
+│   └── 261_Group_Describe.spec.ts         # Nested describe blocks
+├── 19_Data_Driven_Testing/
+│   ├── 262_DDT_Simple.spec.ts             # DDT with inline data
+│   ├── 263_DDT_CSV.spec.ts                # DDT with CSV reader
+│   ├── 264_DDT_CSV.spec.ts                # DDT with hooks + CSV
+│   ├── csvReader.ts                       # CSV file reader utility
+│   └── login-data.csv                     # Test data file
 └── Tasks/
     ├── Task_21_april/
     │   ├── Task_Multiple_Context.spec.ts      # Multiple context with SauceDemo
@@ -126,6 +142,12 @@ tests/
     │   └── Task_02.spec.ts                     # Indian states map interaction
     └── Task_14_May/
         └── Project#09.spec.ts                  # Shadow DOM, Calendars
+    └── Task_19_May/
+        ├── Project_10_DD_Testing.spec.ts       # Data-driven registration test
+        ├── register_csvReader.ts               # CSV reader for register data
+        ├── register.csv                        # Registration test data
+        ├── register.json                       # Registration test data (JSON)
+        └── users.xlsx                          # Registration test data (Excel)
 ```
 
 ## 🧪 Running Tests
@@ -255,7 +277,44 @@ npx ts-node tests/02_first_test/213_multiple_context.spec.ts
   - Keyboard navigation (Tab, type)
   - Click interaction within shadow DOM
 
-### 5. SVG Handling (`12_Handle_SVG/`)
+#### Task_19_May/
+
+- **Project_10_DD_Testing.spec.ts**: Data-driven registration test with CSV
+  - Reads user data from `register.csv` via custom `register_csvReader`
+  - Dynamically generates tests for each user record
+  - Fills registration form (First Name, Last Name, E-Mail, Telephone, Password)
+  - Handles newsletter subscription checkbox
+  - Submits and validates account creation
+
+### 5. Expect Assertions (`17_Expect_Assertions/`)
+
+- **256_Expec.spec.ts**: Comprehensive expect assertion examples
+  - URL, title, visibility, text content assertions
+  - Negative assertions with `not`
+- **257_URL_Assertion.spec.ts**: URL and navigation assertions
+  - `toHaveURL`, `toContain` URL patterns
+  - Assertion timing and retry behavior
+
+### 6. Test Hooks (`18_Test_Hooks/`)
+
+- **258_Test_hook.spec.ts**: beforeEach/afterEach hooks
+- **259_Grouped_Test.spec.ts**: Test grouping with describe
+- **260_Test_Before_After.spec.ts**: Before/After lifecycle
+- **261_Group_Describe.spec.ts**: Nested describe blocks for structured suites
+
+### 7. Data-Driven Testing (`19_Data_Driven_Testing/`)
+
+- **262_DDT_Simple.spec.ts**: Data-driven testing with inline data arrays
+  - Multiple login scenarios (valid, invalid, empty fields)
+  - URL-based assertions after login
+- **263_DDT_CSV.spec.ts**: Data-driven testing with external CSV data
+  - Reads test data from `login-data.csv` via `csvReader`
+  - Iterates over CSV rows to generate test cases
+- **264_DDT_CSV.spec.ts**: DDT with CSV + test hooks
+  - Combines beforeEach/afterEach with CSV-driven data
+  - Console logging of test status in afterEach
+
+### 8. SVG Handling (`12_Handle_SVG/`)
 
 - **248_SVG_Project.spec.ts**: SVG element interaction on Flipkart
   - Locating SVG elements
@@ -265,14 +324,14 @@ npx ts-node tests/02_first_test/213_multiple_context.spec.ts
   - Clicking circle and bar SVG shapes
   - Output text validation
 
-### 6. Shadow DOM (`13_ShadowDOM/`)
+### 9. Shadow DOM (`13_ShadowDOM/`)
 
 - **251_shadow_dom.spec.ts**: Shadow DOM form handling
   - Filling email/password in Shadow DOM card
   - Nested Shadow DOM interaction
   - Counter increment within Shadow DOM
 
-### 7. File Upload (`14_File_upload/`)
+### 10. File Upload (`14_File_upload/`)
 
 - **252_File_upload.spec.ts**: Single file upload via `setInputFiles`
   - Uploads file to the-internet.herokuapp.com
@@ -281,13 +340,13 @@ npx ts-node tests/02_first_test/213_multiple_context.spec.ts
   - Uploads multiple files (file1.jpg, file2.jpg)
   - PatternFly demo page integration
 
-### 8. File Download (`15_File_Download/`)
+### 11. File Download (`15_File_Download/`)
 
 - **254_File_Doenload.spec.ts**: File download handling
   - Capturing and validating downloaded files
   - Download path configuration
 
-### 9. Scroll to Element (`16_ScrollToElement/`)
+### 12. Scroll to Element (`16_ScrollToElement/`)
 
 - **255_Scroll_to_view.spec.ts**: Scroll to element interactions
   - Scrolling elements into view
@@ -473,6 +532,10 @@ test("multiple contexts", async () => {
 19. Scroll to elements with `16_ScrollToElement/` for lazy-loaded content
 20. Combine Shadow DOM with keyboard interactions in `Tests/Task_14_May/`
 21. Use custom TTA reports for detailed test analytics and monitoring
+22. Master expect assertions with `17_Expect_Assertions/` for URL, text, and visibility checks
+23. Structure tests with hooks in `18_Test_Hooks/` using beforeEach/afterEach/describe
+24. Implement data-driven testing with `19_Data_Driven_Testing/` using inline data, CSV, and hooks
+25. Build a complete data-driven registration flow in `Tests/Task_19_May/` with CSV reader
 
 ## 💡 Tips
 
@@ -564,6 +627,17 @@ DEBUG=pw:api npx playwright test
 - Tests can be run in parallel or sequentially
 
 ## 🆕 Recent Updates (May 2026)
+
+### Latest Update (May 23, 2026)
+
+- **Date**: May 23, 2026
+- **Status**: ✅ Completed
+- **Updates**:
+  - Added **17_Expect_Assertions**: URL, text, and visibility assertions (2 test files + cheatsheets)
+  - Added **18_Test_Hooks**: Test lifecycle hooks (beforeEach, afterEach, describe grouping)
+  - Added **19_Data_Driven_Testing**: Data-driven testing with inline data, CSV reader, and hooks (3 test files)
+  - Added **Task_19_May/Project_10_DD_Testing**: CSV-driven registration form test with `register_csvReader`
+  - README updated with all new test categories and learning path entries
 
 ### Latest Update (May 18, 2026)
 
