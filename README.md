@@ -122,8 +122,26 @@ tests/
 │   ├── 262_DDT_Simple.spec.ts             # DDT with inline data
 │   ├── 263_DDT_CSV.spec.ts                # DDT with CSV reader
 │   ├── 264_DDT_CSV.spec.ts                # DDT with hooks + CSV
+│   ├── 265_DDT_JSON.spec.ts               # DDT with JSON data
+│   ├── 266_DDT_FakerJS.spec.ts            # FakerJS data-driven template
+│   ├── 267_FakerJS2.spec.ts               # Single user with Faker
+│   ├── 268_FakeJS3.spec.ts                # Faker with reusable helper
+│   ├── 269_DDT_FakerJS.spec.ts            # Parameterized Faker (5 users)
 │   ├── csvReader.ts                       # CSV file reader utility
-│   └── login-data.csv                     # Test data file
+│   ├── login-data.csv                     # Test data file
+│   ├── registration-data.json             # JSON test data file
+│   ├── xlsx-reader.ts                     # Excel file reader utility
+│   └── yamlReader.ts                      # YAML file reader utility
+├── 20_PageObjectModel/
+│   ├── 270_Without_POM.spec.ts            # Login test without POM
+│   ├── 271_with_POM.spec.ts               # Login test with POM
+│   └── LoginPage.ts                       # Page Object Model class
+├── 21_Fixture/
+│   └── 272_Fixture_placeholder.spec.ts    # Custom fixtures placeholder
+├── 22_Misc_Consepts/
+│   └── 273_Misc_Concepts_Placeholder.spec.ts # Misc concepts placeholder
+├── 23_Advanced_Frame_work/
+│   └── 274_Advanced_framework_placeholder.spec.ts # Advanced framework placeholder
 └── Tasks/
     ├── Task_21_april/
     │   ├── Task_Multiple_Context.spec.ts      # Multiple context with SauceDemo
@@ -140,8 +158,8 @@ tests/
     │   └── Project#5_QA_Profile_Form.spec.ts  # QA Profile form automation
     ├── Task_12_May_Project#8/
     │   └── Task_02.spec.ts                     # Indian states map interaction
-    └── Task_14_May/
-        └── Project#09.spec.ts                  # Shadow DOM, Calendars
+    ├── Task_14_May/
+    │   └── Project#09.spec.ts                  # Shadow DOM, Calendars
     └── Task_19_May/
         ├── Project_10_DD_Testing.spec.ts       # Data-driven registration test
         ├── register_csvReader.ts               # CSV reader for register data
@@ -313,6 +331,27 @@ npx ts-node tests/02_first_test/213_multiple_context.spec.ts
 - **264_DDT_CSV.spec.ts**: DDT with CSV + test hooks
   - Combines beforeEach/afterEach with CSV-driven data
   - Console logging of test status in afterEach
+- **265_DDT_JSON.spec.ts**: Data-driven testing with JSON data
+  - Reads test scenarios from `registration-data.json`
+  - Scenarios: valid login, password mismatch, weak password, duplicate email
+- **266_DDT_FakerJS.spec.ts**: FakerJS data-driven template
+  - Generates random user data with `@faker-js/faker`
+  - Submits login form and validates "no match" error
+- **267_FakerJS2.spec.ts**: Single user registration with Faker
+  - Creates inline Faker fields (firstName, lastName, email, phone, password)
+  - Fills complete registration form
+- **268_FakeJS3.spec.ts**: Faker with reusable helper
+  - Extracts user generation into a reusable `generateUser()` helper
+  - Same registration flow with cleaner abstraction
+- **269_DDT_FakerJS.spec.ts**: Parameterized Faker (5 iterations)
+  - Loops 5 times generating unique users
+  - Rotating email domains (gmail, yahoo, outlook, tta.dev, icloud)
+
+#### Data Readers
+
+- **csvReader.ts**: Reads CSV files and returns normalized test data arrays
+- **xlsx-reader.ts**: Reads Excel (.xlsx) workbooks via `readXLSX(filePath, sheetName?)`
+- **yamlReader.ts**: Reads YAML files via `readYAML(filePath, key?)` with optional key extraction
 
 ### 8. SVG Handling (`12_Handle_SVG/`)
 
@@ -352,7 +391,34 @@ npx ts-node tests/02_first_test/213_multiple_context.spec.ts
   - Scrolling elements into view
   - Handling lazy-loaded content
 
-### 10. Web Tables (`06_Multiple_Elements/07_Web_Tables/`)
+### 8. Page Object Model (`20_PageObjectModel/`)
+
+- **270_Without_POM.spec.ts**: Login test without POM pattern
+  - All locators and actions written inline in the test
+  - Demonstrates code duplication and maintenance challenges
+- **271_with_POM.spec.ts**: Login test using POM pattern
+  - Delegates all page interactions to `LoginPage` class
+  - Combines FakerJS data generation with POM abstraction
+- **LoginPage.ts**: Reusable Page Object Model class
+  - `goto()`, `login(username, password)`, `checkTitle()` helpers
+  - Centralized locators for email, password, and submit button
+
+### 9. Custom Fixtures (`21_Fixture/`)
+
+- **272_Fixture_placeholder.spec.ts**: Placeholder for custom fixtures
+  - Skipped/empty test for future fixture-based lessons
+
+### 10. Miscellaneous Concepts (`22_Misc_Consepts/`)
+
+- **273_Misc_Concepts_Placeholder.spec.ts**: Placeholder for misc concepts
+  - Skipped test reserved for future topics
+
+### 11. Advanced Framework (`23_Advanced_Frame_work/`)
+
+- **274_Advanced_framework_placeholder.spec.ts**: Placeholder for advanced framework patterns
+  - Skipped describe block for future advanced topics
+
+### 12. Web Tables (`06_Multiple_Elements/07_Web_Tables/`)
 
 - **232_WebTable_Basic.spec.ts**: Basic web table handling
   - Table row and cell selection
@@ -500,6 +566,7 @@ test("multiple contexts", async () => {
 
 - `@playwright/test` - Playwright Test Framework
 - `playwright` - Playwright Core
+- `@faker-js/faker` - Fake data generation for data-driven tests
 - `typescript` - TypeScript support
 - `ts-node` - Run TypeScript directly
 
@@ -534,8 +601,13 @@ test("multiple contexts", async () => {
 21. Use custom TTA reports for detailed test analytics and monitoring
 22. Master expect assertions with `17_Expect_Assertions/` for URL, text, and visibility checks
 23. Structure tests with hooks in `18_Test_Hooks/` using beforeEach/afterEach/describe
-24. Implement data-driven testing with `19_Data_Driven_Testing/` using inline data, CSV, and hooks
+24. Implement data-driven testing with `19_Data_Driven_Testing/` using inline data, CSV, JSON, and hooks
 25. Build a complete data-driven registration flow in `Tests/Task_19_May/` with CSV reader
+26. Use FakerJS for generating realistic fake data in `19_Data_Driven_Testing/` (266-269)
+27. Adopt the Page Object Model pattern with `20_PageObjectModel/` for maintainable tests
+28. Explore custom fixtures with `21_Fixture/` for reusable test setup
+29. Dive into miscellaneous concepts with `22_Misc_Consepts/`
+30. Build an advanced framework with `23_Advanced_Frame_work/`
 
 ## 💡 Tips
 
@@ -627,6 +699,19 @@ DEBUG=pw:api npx playwright test
 - Tests can be run in parallel or sequentially
 
 ## 🆕 Recent Updates (May 2026)
+
+### Latest Update (May 25, 2026)
+
+- **Date**: May 25, 2026
+- **Status**: ✅ Completed
+- **Updates**:
+  - Added **DDT with JSON** (`265_DDT_JSON.spec.ts`) — data-driven login tests from JSON
+  - Added **FakerJS integration** (266–269) — fake data generation with `@faker-js/faker`
+  - Added **xlsx-reader.ts** and **yamlReader.ts** — Excel and YAML test data readers
+  - Added **20_PageObjectModel/** — POM pattern examples (`LoginPage.ts`, with/without POM)
+  - Added **21_Fixture/**, **22_Misc_Consepts/**, **23_Advanced_Frame_work/** — placeholder directories for upcoming topics
+  - Updated `package.json` with `@faker-js/faker` dependency
+  - README updated with new test categories, data readers, POM section, and learning path entries
 
 ### Latest Update (May 23, 2026)
 
