@@ -14,13 +14,13 @@ test.describe("FakerJS data-driven template", () => {
     };
 
     await page.getByRole("textbox", { name: "Username" }).fill(testUser.name);
-    await page.getByRole("textbox", { name: "Password" }).fill(testUser.password);
+    await page
+      .getByRole("textbox", { name: "Password" })
+      .fill(testUser.password);
     await page.getByRole("button", { name: "Login" }).click();
 
     await expect(page.getByRole("alert")).toContainText(
       "Username and password do not match any user in this service",
     );
-
-    await page.waitForTimeout(5000);
   });
 });
